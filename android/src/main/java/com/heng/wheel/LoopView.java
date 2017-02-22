@@ -45,7 +45,7 @@ public class LoopView extends View {
 
     int maxTextWidth;
 
-    int maxTextHeight;
+    int maxTextHeight = 55;
     int colorGray = 0xffafafaf;
     int colorBlack = 0xff313131;
 
@@ -148,8 +148,9 @@ public class LoopView extends View {
         if (items == null) {
             return;
         }
-
-        measureTextWidthHeight();
+        
+        // Note: Using the hardcoded text height
+        // measureTextWidthHeight();
 
         halfCircumference = (int) (maxTextHeight * lineSpacingMultiplier * (itemsVisible - 1));
         mViewHeight = (int) ((halfCircumference * 2) / Math.PI);
